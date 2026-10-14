@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>DUMU — تطبيق الطالب الجامعي الذكي | تنزيل تطبيق أندرويد</title>
+  
+  <!-- Meta & SEO -->
+  <meta name="description" content="حمّل تطبيق DUMU (تطبيق الطالب الجامعي الذكي) لنظام أندرويد. إدارة الجدول الدراسي، التنبيه التلقائي للمحاضرات، الصامت التلقائي، قارئ المستندات، والربط مع بوابة DULMS. خفيف جداً ومجاني وبدون إنترنت." />
+  <meta name="keywords" content="DUMU, Smart Student Portal, Delta University, تطبيق الطالب الذكي, تنزيل APK, جدول المحاضرات, جامعة الدلتا" />
+  <meta name="author" content="Mohamed Shaaban" />
+  <meta name="theme-color" content="#0b0f19" />
+
+  <!-- OpenGraph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="DUMU — تطبيق الطالب الجامعي الذكي للأندرويد" />
+  <meta property="og:description" content="حمّل النسخة الرسمية والمجانية من تطبيق DUMU بحجم 338 كيلوبايت فقط. منظم المحاضرات والمستندات بدون إعلانات." />
+  <meta property="og:image" content="assets/app_icon.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/app_icon.png" />
+  <link rel="apple-touch-icon" href="assets/app_icon.png" />
+
+  <!-- Google Fonts: Inter & Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Core Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Ambient Animated Glow Background -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand" aria-label="DUMU Home">
+        <div class="brand-logo-wrap">
+          <img src="assets/app_icon.png" alt="DUMU Icon" class="brand-logo" />
+          <span class="online-indicator" title="Latest Release Ready"></span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">DUMU</span>
+          <span class="brand-badge">v1.0.0.6</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav class="nav-links" id="navMenu">
+        <a href="#features" class="nav-link" data-i18n="nav_features">المميزات</a>
+        <a href="#preview" class="nav-link" data-i18n="nav_screens">معاينة التطبيق</a>
+        <a href="#how-to-install" class="nav-link" data-i18n="nav_install">طريقة التثبيت</a>
+        <a href="#specs" class="nav-link" data-i18n="nav_specs">المواصفات</a>
+        <a href="#developer" class="nav-link" data-i18n="nav_dev">المطور</a>
+      </nav>
+
+      <!-- Nav Controls -->
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <button class="icon-toggle-btn" id="langToggleBtn" onclick="toggleLanguage()" title="Switch Language / تغيير اللغة" aria-label="Change Language">
+          <span class="lang-code" id="langLabel">EN</span>
+        </button>
+
+        <!-- Theme Switcher -->
+        <button class="icon-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()" title="Switch Dark / Light Theme" aria-label="Toggle Theme">
+          <svg class="theme-icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Quick Download CTA in Nav -->
+        <a href="DUMU.apk" download="DUMU.apk" class="nav-download-btn" onclick="handleDownloadTrigger(event)" id="navDownloadBtn">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+          </svg>
+          <span data-i18n="nav_download">تحميل APK</span>
+        </a>
+
+        <!-- Mobile Menu Hamburger -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <div class="hero-container">
+      
+      <!-- Hero Content -->
+      <div class="hero-content">
+        <!-- Release Chip -->
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span class="badge-text" data-i18n="hero_badge">الإصدار المستقر الرسمي 1.0.0.6 • متاح الآن</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span data-i18n="hero_title_1">تطبيق</span>
+          <span class="gradient-text">DUMU</span>
+          <span data-i18n="hero_title_2">المساعد الأكاديمي الذكي لطلاب الجامعة</span>
+        </h1>
+
+        <p class="hero-subtitle" data-i18n="hero_sub">
+          الرفيق الأكاديمي المتكامل لطلاب كلية الذكاء الاصطناعي وجامعة الدلتا. تتبع جدول المحاضرات، كتم صوت الهاتف تلقائياً أثناء المحاضرة، منبهات دقيقة، قارئ للمستندات والملفات، مع وصول فوري لبوابة DULMS — في تطبيق أصلي وخفيف جداً يعمل بدون إنترنت!
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta-group">
+          <a href="DUMU.apk" download="DUMU.apk" class="primary-download-btn" id="heroDownloadBtn" onclick="handleDownloadTrigger(event)">
+            <div class="btn-icon-wrap">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
+              </svg>
+            </div>
+            <div class="btn-text-wrap">
+              <span class="btn-label" data-i18n="hero_btn_download">تحميل تطبيق DUMU (APK)</span>
+              <span class="btn-meta">
+                <span data-i18n="hero_btn_size">الحجم: 338 كيلوبايت</span> • Android 7.0+
+              </span>
+            </div>
+          </a>
+
+          <a href="#how-to-install" class="secondary-btn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polygon points="10 8 16 12 10 16 10 8"></polygon>
+            </svg>
+            <span data-i18n="hero_btn_guide">دليل التثبيت السريع</span>
+          </a>
+        </div>
+
+        <!-- Trust & Value Badges -->
+        <div class="hero-trust-row">
+          <div class="trust-item">
+            <span class="trust-icon">🛡️</span>
+            <div>
+              <strong data-i18n="trust_safe_title">آمن 100%</strong>
+              <small data-i18n="trust_safe_desc">خالٍ من الإعلانات والتتبع</small>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">⚡</span>
+            <div>
+              <strong data-i18n="trust_size_title">خفيف وفائق السرعة</strong>
+              <small data-i18n="trust_size_desc">أقل من نصف ميجابايت</small>
+            </div>
+          </div>
+          <div class="trust-item">
+            <span class="trust-icon">📴</span>
+            <div>
+              <strong data-i18n="trust_offline_title">يعمل بدون إنترنت</strong>
+              <small data-i18n="trust_offline_desc">وصول كامل لبياناتك دائماً</small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Hero Visual: Interactive Phone Mockup -->
+      <div class="hero-visual">
+        <div class="phone-wrapper">
+          <!-- Outer Phone Frame -->
+          <div class="phone-chassis">
+            <div class="phone-notch">
+              <div class="camera-lens"></div>
+              <div class="speaker-grill"></div>
+            </div>
+            
+            <!-- Screen Content -->
+            <div class="phone-screen">
+              <img src="assets/screen_dashboard.png" alt="DUMU App Screen Preview" id="phoneMockupImg" class="screen-img active" />
+              <div class="screen-overlay-glare"></div>
+            </div>
+
+            <!-- Home indicator -->
+            <div class="phone-home-bar"></div>
+          </div>
+
+          <!-- Screen Switcher Pills -->
+          <div class="screen-switcher-pills">
+            <button class="screen-pill active" onclick="switchMockupScreen('assets/screen_dashboard.png', this)">
+              <span data-i18n="mock_dashboard">الرئيسية</span>
+            </button>
+            <button class="screen-pill" onclick="switchMockupScreen('assets/screen_schedule.png', this)">
+              <span data-i18n="mock_schedule">الجدول الدراسي</span>
+            </button>
+            <button class="screen-pill" onclick="switchMockupScreen('assets/screen_courses.png', this)">
+              <span data-i18n="mock_courses">المقررات والتسجيل</span>
+            </button>
+            <button class="screen-pill" onclick="switchMockupScreen('assets/screen_documents.png', this)">
+              <span data-i18n="mock_docs">المستندات والمكتبة</span>
+            </button>
+            <button class="screen-pill" onclick="switchMockupScreen('assets/screen_installed.png', this)">
+              <span data-i18n="mock_app">التطبيق على الهاتف</span>
+            </button>
+          </div>
+
+          <!-- Desktop QR Code Floating Box -->
+          <div class="qr-floating-card">
+            <div class="qr-code-box" id="qrContainer"></div>
+            <div class="qr-info">
+              <div class="qr-title" data-i18n="qr_title">تنزيل مباشر بالهاتف</div>
+              <div class="qr-desc" data-i18n="qr_desc">امسح الكود بكاميرا هاتفك للتحميل الفوري</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATS / HIGHLIGHTS BAR -->
+  <section class="stats-section">
+    <div class="stats-container">
+      <div class="stat-card">
+        <div class="stat-number">338 <span class="stat-unit">KB</span></div>
+        <div class="stat-label" data-i18n="stat_size">حجم فائق الصغر</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">0.0 <span class="stat-unit">sec</span></div>
+        <div class="stat-label" data-i18n="stat_speed">تشغيل فوري بدون أي تأخير</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">Android 7.0+</div>
+        <div class="stat-label" data-i18n="stat_compat">يدعم حتى أحدث أندرويد 15</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">100%</div>
+        <div class="stat-label" data-i18n="stat_free">مجاني بالكامل وبدون إعلانات</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="features-section" id="features">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <div class="section-tag" data-i18n="features_tag">قدرات صُممت للتميز</div>
+        <h2 class="section-title" data-i18n="features_title">كل ما يحتاجه الطالب الجامعي في مكان واحد</h2>
+        <p class="section-desc" data-i18n="features_desc">
+          تم تصميم DUMU بعناية من قِبل طالب ومهندس ذكاء اصطناعي لحل المشاكل اليومية الحقيقية لطلاب الجامعة بكل سلاسة.
+        </p>
+      </div>
+
+      <div class="features-grid">
+
+        <!-- Feature 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box bg-blue">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z"/>
+            </svg>
+          </div>
+          <h3 class="feature-name" data-i18n="f1_title">الجدول الدراسي الذكي</h3>
+          <p class="feature-text" data-i18n="f1_desc">
+            عرض منظم لجميع محاضرات الأسبوع مع تحديد وقت البداية، رقم القاعة، المبنى واسم أستاذ المادة وتنبيه بالمحاضرة القادمة.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box bg-purple">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/>
+            </svg>
+          </div>
+          <h3 class="feature-name" data-i18n="f2_title">الوضع الصامت التلقائي (DND)</h3>
+          <p class="feature-text" data-i18n="f2_desc">
+            يقوم التطبيق بتحويل الهاتف تلقائياً للوضع الصامت عند بدء موعد المحاضرة وإعادته للوضع الطبيعي بعد انتهائها لحمايتك من الإحراج.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box bg-green">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+            </svg>
+          </div>
+          <h3 class="feature-name" data-i18n="f3_title">منبهات وتنبيهات دقيقة</h3>
+          <p class="feature-text" data-i18n="f3_desc">
+            تنبيهات فورية قبل المحاضرة تضمن استيقاظك ووصولك للقاعة في الوقت المناسب مع إشعارات واضحة وتفاعلية.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-box bg-amber">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z"/>
+            </svg>
+          </div>
+          <h3 class="feature-name" data-i18n="f4_title">ويدجت الشاشة الرئيسية (Widget)</h3>
+          <p class="feature-text" data-i18n="f4_desc">
+            ويدجت أنيق يُعرض على شاشة هاتفك الرئيسية ليوضح لك المحاضرة القادمة والقاعة الحالية بنظرة واحدة دون فتح التطبيق.
+          </p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-box bg-cyan">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+            </svg>
+          </div>
+          <h3 class="feature-name" data-i18n="f5_title">قارئ المستندات والوسائط المدمج</h3>
+          <p class="feature-text" data-i18n="f5_desc">
+            استعراض سلايدات المحاضرات والملفات بصيغ (PDF, Word DOCX, PowerPoint PPTX, الصور، الصوتيات والفيديوهات) داخل التطبيق مباشرة.
+          </p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-box bg-rose">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 13.5l-7-3.82v4.1L12 21l7-4.22v-4.1L12 16.5z"/>
+            </svg>
+          </div>
+          <h3 class="feature-name" data-i18n="f6_title">تكامل سريع مع DULMS</h3>
+          <p class="feature-text" data-i18n="f6_desc">
+            وصول بلمسة واحدة لبوابة التعلم الإلكتروني لجامعة الدلتا وتصفح المقررات والواجبات بدون تعقيد التصفح الخارجي.
+          </p>
+        </div>
+
+        <!-- Feature 7 -->
+        <div class="feature-card">
+          <div class="feature-icon-box bg-emerald">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+            </svg>
+          </div>
+          <h3 class="feature-name" data-i18n="f7_title">محول الصور إلى PDF</h3>
+          <p class="feature-text" data-i18n="f7_desc">
+            التقط صور ملخصات المحاضرات أو السبورة وحولها في ثوانٍ إلى ملف PDF متعدد الصفحات عالي الجودة لمشاركته وحفظه.
+          </p>
+        </div>
+
+        <!-- Feature 8 -->
+        <div class="feature-card">
+          <div class="feature-icon-box bg-indigo">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+              <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+            </svg>
+          </div>
+          <h3 class="feature-name" data-i18n="f8_title">النسخ الاحتياطي السحابي وحساب المعدل</h3>
+          <p class="feature-text" data-i18n="f8_desc">
+            تصدير واستيراد خطتك الدراسية بنقرة واحدة، بالإضافة إلى حاسبة GPA دقيقة لاحتساب المعدل الفصلي والتراكمي.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS / SHOWCASE SECTION -->
+  <section class="preview-section" id="preview">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <div class="section-tag" data-i18n="preview_tag">واجهة حديثة وعصرية</div>
+        <h2 class="section-title" data-i18n="preview_title">تصميم Material 3 الأنيق وسهل الاستخدام</h2>
+        <p class="section-desc" data-i18n="preview_desc">
+          شاشات تفاعلية مستوحاة من أحدث معايير Google Design، تدعم اللغة العربية والإنجليزية وتتكيف مع الوضعين الداكن والفاتح.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        
+        <div class="gallery-card" onclick="openLightbox('assets/screen_dashboard.png', 'الرئيسية ولوحة التحكم')">
+          <div class="gallery-img-box">
+            <img src="assets/screen_dashboard.png" alt="الرئيسية ولوحة التحكم" loading="lazy" />
+            <div class="gallery-overlay">
+              <span>🔍 مكبر الشاشة</span>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4 data-i18n="s1_title">لوحة التحكم والمحاضرة القادمة</h4>
+            <p data-i18n="s1_desc">نظرة سريعة على اليوم الدراسي، نسبة إنجاز الساعات، والاختصارات الحيوية.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox('assets/screen_schedule.png', 'الجدول الدراسي')">
+          <div class="gallery-img-box">
+            <img src="assets/screen_schedule.png" alt="الجدول الدراسي" loading="lazy" />
+            <div class="gallery-overlay">
+              <span>🔍 مكبر الشاشة</span>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4 data-i18n="s2_title">الجدول الأسبوعي التفاعلي</h4>
+            <p data-i18n="s2_desc">عرض زمني دقيق لكل يوم مع فلاتر سريعة وألوان مميزة لكل مادة وقاعة.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox('assets/screen_courses.png', 'موادي والتسجيل')">
+          <div class="gallery-img-box">
+            <img src="assets/screen_courses.png" alt="موادي والتسجيل" loading="lazy" />
+            <div class="gallery-overlay">
+              <span>🔍 مكبر الشاشة</span>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4 data-i18n="s3_title">إدارة المواد والساعات المعتمدة</h4>
+            <p data-i18n="s3_desc">متابعة الساعات المسجلة والمقررات المقترحة وتفاصيل الامتحانات النصفية.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox('assets/screen_documents.png', 'مركز المستندات والملفات')">
+          <div class="gallery-img-box">
+            <img src="assets/screen_documents.png" alt="المستندات والملفات" loading="lazy" />
+            <div class="gallery-overlay">
+              <span>🔍 مكبر الشاشة</span>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4 data-i18n="s4_title">مركز المستندات والملفات</h4>
+            <p data-i18n="s4_desc">مكتبة سحابية وشخصية لتنظيم محاضراتك ومشاركتها مع زملائك بسهولة.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox('assets/screen_emulator.png', 'تجربة المحاكي الأصلية')">
+          <div class="gallery-img-box">
+            <img src="assets/screen_emulator.png" alt="تجربة المحاكي الأصلية" loading="lazy" />
+            <div class="gallery-overlay">
+              <span>🔍 مكبر الشاشة</span>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4 data-i18n="s5_title">أداء أصلي على نظام أندرويد</h4>
+            <p data-i18n="s5_desc">مبني ليعمل بسلاسة 120Hz دون استهلاك للبطارية أو الذاكرة العشوائية.</p>
+          </div>
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox('assets/screen_installed.png', 'تثبيت التطبيق على الجهاز')">
+          <div class="gallery-img-box">
+            <img src="assets/screen_installed.png" alt="أيقونة DUMU على أندرويد" loading="lazy" />
+            <div class="gallery-overlay">
+              <span>🔍 مكبر الشاشة</span>
+            </div>
+          </div>
+          <div class="gallery-info">
+            <h4 data-i18n="s6_title">أيقونة أنيقة وتوافق كامل</h4>
+            <p data-i18n="s6_desc">جاهز للتثبيت الفوري بنقرة واحدة كأي تطبيق رسمي موثوق.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOW TO INSTALL SECTION -->
+  <section class="install-section" id="how-to-install">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <div class="section-tag" data-i18n="inst_tag">تثبيت سهل وسريع</div>
+        <h2 class="section-title" data-i18n="inst_title">كيفية تثبيت ملف APK على هاتفك في 3 خطوات</h2>
+        <p class="section-desc" data-i18n="inst_desc">
+          نظراً لأن التطبيق يتم تحميله كملف APK أصلي، اتبع الخطوات البسيطة التالية لتثبيته خلال 30 ثانية.
+        </p>
+      </div>
+
+      <div class="steps-grid">
+        
+        <!-- Step 1 -->
+        <div class="step-card">
+          <div class="step-badge">1</div>
+          <div class="step-icon">📥</div>
+          <h3 class="step-title" data-i18n="step1_title">تحميل ملف DUMU.apk</h3>
+          <p class="step-text" data-i18n="step1_desc">
+            اضغط على زر التحميل في الصفحة، وسيتم تنزيل ملف التثبيت فوراً (حجمه 338 كيلوبايت فقط وينتهي في ثوانٍ).
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card">
+          <div class="step-badge">2</div>
+          <div class="step-icon">⚙️</div>
+          <h3 class="step-title" data-i18n="step2_title">السماح بتثبيت التطبيقات</h3>
+          <p class="step-text" data-i18n="step2_desc">
+            عند فتح الملف، إذا ظهرت لك رسالة أمان أندرويد، اضغط "الإعدادات" ثم فعّل خيار "السماح من هذا المصدر" (Allow from this source).
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card">
+          <div class="step-badge">3</div>
+          <div class="step-icon">🎉</div>
+          <h3 class="step-title" data-i18n="step3_title">تثبيت وتشغيل التطبيق</h3>
+          <p class="step-text" data-i18n="step3_desc">
+            اضغط على "تثبيت" (Install) ثم "فتح" (Open). التطبيق جاهز فوراً دون الحاجة لإنشاء حساب أو إعدادات معقدة!
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Quick Download Banner inside Steps -->
+      <div class="cta-banner">
+        <div class="cta-banner-content">
+          <h3 data-i18n="banner_title">جاهز لتنظيم حياتك الأكاديمية؟</h3>
+          <p data-i18n="banner_sub">حمّل التطبيق الآن واستمتع بتجربة دراسية ذكية وهادئة.</p>
+        </div>
+        <a href="DUMU.apk" download="DUMU.apk" class="primary-download-btn banner-btn" onclick="handleDownloadTrigger(event)">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+          </svg>
+          <span data-i18n="banner_btn">تحميل DUMU.apk الآن</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TECH SPECS SECTION -->
+  <section class="specs-section" id="specs">
+    <div class="section-container">
+      
+      <div class="section-header">
+        <div class="section-tag" data-i18n="specs_tag">بيانات الحزمة والتوافق</div>
+        <h2 class="section-title" data-i18n="specs_title">المواصفات الفنية لملف APK</h2>
+      </div>
+
+      <div class="specs-table-wrap">
+        <table class="specs-table">
+          <tbody>
+            <tr>
+              <th data-i18n="spec_app_name">اسم التطبيق</th>
+              <td><strong>DUMU (Smart Student Portal)</strong></td>
+            </tr>
+            <tr>
+              <th data-i18n="spec_pkg_name">اسم الحزمة (Package)</th>
+              <td><code>com.smartstudent.app</code></td>
+            </tr>
+            <tr>
+              <th data-i18n="spec_ver">رقم الإصدار</th>
+              <td><span class="badge-pill">v1.0.0.6 (Build 6)</span></td>
+            </tr>
+            <tr>
+              <th data-i18n="spec_size">حجم الملف</th>
+              <td><code>338 KB (346,056 bytes)</code></td>
+            </tr>
+            <tr>
+              <th data-i18n="spec_min_os">الحد الأدنى لنظام التشغيل</th>
+              <td>Android 7.0 Nougat (API 24)</td>
+            </tr>
+            <tr>
+              <th data-i18n="spec_target_os">النظام المستهدف</th>
+              <td>Android 15 (API 35)</td>
+            </tr>
+            <tr>
+              <th data-i18n="spec_lang">اللغات المدعومة</th>
+              <td>العربية (افتراضي كامل RTL) + English</td>
+            </tr>
+            <tr>
+              <th data-i18n="spec_privacy">الخصوصية والإعلانات</th>
+              <td>✅ خالي تماماً من الإعلانات، لا يتطلب أي اشتراك أو بيانات شخصية</td>
+            </tr>
+            <tr>
+              <th data-i18n="spec_release">تاريخ التحديث</th>
+              <td>أكتوبر 2026</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DEVELOPER SECTION -->
+  <section class="dev-section" id="developer">
+    <div class="section-container">
+      
+      <div class="dev-card-wrap">
+        
+        <div class="dev-avatar-column">
+          <div class="dev-photo-ring">
+            <img src="assets/developer_photo.webp" alt="Mohamed Shaaban" class="dev-photo" />
+            <span class="dev-badge-icon" title="Certified Developer">🤖</span>
+          </div>
+          <div class="dev-status">
+            <span class="status-indicator"></span>
+            <span data-i18n="dev_status">مطور نشط • طالب كلية الذكاء الاصطناعي</span>
+          </div>
+        </div>
+
+        <div class="dev-content-column">
+          <div class="dev-label" data-i18n="dev_tag">المطور والمصمم</div>
+          <h2 class="dev-name">محمد شعبان (Mohamed Shaaban)</h2>
+          <div class="dev-role">
+            <span>AI Engineering Student</span>
+            <span class="dot-separator">•</span>
+            <span>مهندس ذكاء اصطناعي</span>
+            <span class="dot-separator">•</span>
+            <span>جامعة الدلتا للعلوم والتكنولوجيا</span>
+          </div>
+
+          <blockquote class="dev-quote" data-i18n="dev_quote">
+            "صُمم هذا المشروع بدافع الشغف لخدمة زملائي الطلاب وتوفير أداة ذكية تجمع كل ما يحتاجه الطالب يومياً في تطبيق فائق الخفة، بدون إعلانات مزعجة وبأعلى معايير الجودة والأداء."
+          </blockquote>
+
+          <!-- Social Buttons -->
+          <div class="dev-social-grid">
+            <a href="https://github.com/momoshworks" target="_blank" rel="noopener" class="social-btn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/mohamed-sahbaan-2772883b8" target="_blank" rel="noopener" class="social-btn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76c.92 0 1.66-.74 1.66-1.66a1.66 1.66 0 0 0-1.66-1.66 1.66 1.66 0 0 0-1.66 1.66c0 .92.74 1.66 1.66 1.66m1.39 9.74v-8.37H5.07v8.37h2.78z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="https://wa.me/201034191685" target="_blank" rel="noopener" class="social-btn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2m.01 1.67c2.2 0 4.26.86 5.82 2.42a8.225 8.225 0 0 1 2.41 5.83c0 4.54-3.7 8.24-8.24 8.24-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24m4.52 11.66c-.25-.13-1.47-.72-1.7-.81-.23-.08-.39-.13-.56.13-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.13-1.06-.39-2.02-1.25-.75-.67-1.26-1.5-1.41-1.75-.15-.25-.02-.39.11-.51.11-.11.25-.29.37-.44.13-.14.17-.25.25-.42.08-.17.04-.31-.02-.44-.06-.13-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.88.86-.88 2.1s.9 2.44 1.03 2.61c.13.17 1.77 2.7 4.29 3.79.6.26 1.07.41 1.43.53.6.19 1.15.16 1.58.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.15-1.18-.06-.1-.23-.17-.48-.3z"/>
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+
+            <a href="mailto:momoshworks@gmail.com?subject=[DUMU%20App]%20Inquiry" class="social-btn">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+              </svg>
+              <span data-i18n="dev_email">البريد الإلكتروني</span>
+            </a>
+          </div>
+
+          <!-- Share Button -->
+          <div class="share-box">
+            <button class="share-btn" onclick="shareWebsite()">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"/>
+              </svg>
+              <span data-i18n="btn_share_classmates">مشاركة الرابط مع زملائك بالدفعة</span>
+            </button>
+            <button class="share-btn-secondary" onclick="copyDownloadLink()">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                <path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/>
+              </svg>
+              <span data-i18n="btn_copy_link">نسخ رابط التنزيل</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/app_icon.png" alt="DUMU" class="footer-logo" />
+          <div>
+            <div class="footer-name">DUMU</div>
+            <div class="footer-tagline" data-i18n="footer_tag">تطبيق الطالب الجامعي الذكي • كلية الذكاء الاصطناعي</div>
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <a href="#hero" data-i18n="foot_home">الرئيسية</a>
+          <a href="#features" data-i18n="foot_features">المميزات</a>
+          <a href="#how-to-install" data-i18n="foot_install">طريقة التثبيت</a>
+          <a href="#specs" data-i18n="foot_specs">المواصفات</a>
+          <a href="#developer" data-i18n="foot_dev">المطور</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright" data-i18n="footer_copy">
+          © 2026 DUMU • تم التطوير بكل حب لدعم طلبة الجامعة بواسطة المهندس <strong>محمد شعبان</strong>.
+        </p>
+        <button class="back-to-top-btn" onclick="scrollToTop()" title="Back to top" aria-label="Back to top">
+          ↑
+        </button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- DOWNLOAD IN PROGRESS / INSTRUCTIONS MODAL -->
+  <div class="modal-backdrop" id="downloadModal" onclick="if(event.target===this)closeDownloadModal()">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-badge-success">🎉 <span data-i18n="mod_started">بدأ التنزيل بنجاح!</span></div>
+        <button class="modal-close" onclick="closeDownloadModal()">✕</button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="download-animation-wrap">
+          <div class="download-check-ring">
+            <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h3 data-i18n="mod_h3">جاري حفظ ملف DUMU.apk</h3>
+          <p class="text-muted" data-i18n="mod_p">حجم الملف: 338 كيلوبايت فقط • سيظهر الملف في مجلد التنزيلات (Downloads).</p>
+        </div>
+
+        <div class="modal-install-steps">
+          <h4 data-i18n="mod_steps_heading">خطوات سريعة لإكمال التثبيت:</h4>
+          <ol>
+            <li data-i18n="mod_step1">افتح الإشعار أو اذهب إلى مجلد التنزيلات واضغط على <strong>DUMU.apk</strong>.</li>
+            <li data-i18n="mod_step2">إذا طلب أندرويد الإذن، اضغط <strong>الإعدادات</strong> وفعل <strong>السماح بالتثبيت</strong>.</li>
+            <li data-i18n="mod_step3">اضغط <strong>تثبيت (Install)</strong> واستمتع بتجربة دراسية مميزة!</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <a href="DUMU.apk" download="DUMU.apk" class="btn btn-soft" data-i18n="mod_btn_retry">إعادة التنزيل يدويّاً</a>
+        <button class="btn btn-primary" onclick="closeDownloadModal()" data-i18n="mod_btn_ok">حسناً، فهمت</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- LIGHTBOX MODAL FOR SCREENSHOTS -->
+  <div class="lightbox-backdrop" id="lightboxModal" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img src="" alt="Screenshot" id="lightboxImg" />
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-box" id="toastBox">
+    <span id="toastMsg">تم النسخ بنجاح!</span>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
